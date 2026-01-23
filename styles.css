@@ -1,0 +1,220 @@
+:root {
+    --darkSpring: #3D7052;
+    --darkSlate: #2A403C;
+    --gunMetal: #152324;
+    --ashGray: #B8D9CB;
+    --cambridgeBlue: #70947D;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #EEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--darkSlate);
+    background-color: var(--cambridgeBlue);
+}
+
+
+.nav-links {
+    width: 40%;
+}
+
+nav div ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav div ul li a {
+    text-decoration: none;
+    color: var(--gunMetal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+    padding: 0.5rem 1rem;
+    background-color: var(--ashGray);
+    border: 3px solid var(--gunMetal);
+    border-radius: 0.25rem;
+}
+
+nav div ul li a:hover {
+    border-radius: 0%;
+    box-shadow: 4px 4px var(--cambridgeBlue),
+    8px 8px var(--darkSpring),
+    12px 12px var(--darkSlate);
+}
+
+
+.window {
+    margin-bottom: 5rem;
+    width: 50rem;
+    height: fit-content;
+    border: solid 2px var(--darkSlate);
+    box-shadow: 0.5rem 0.5rem var(--ashGray),
+    1rem 1rem var(--cambridgeBlue),
+    1.5rem 1.5rem var(--darkSlate);
+    background-color: #EEE;
+}
+
+.window-title-box {
+    color: var(--gunMetal);
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cambridgeBlue);
+    border-bottom: solid 2px var(--darkSlate);  
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: default;
+}
+
+.window-controls {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.exit-win {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit-win div {
+    position: absolute;
+    width: 1.5rem;
+    height: 0.25rem;
+    background-color: var(--gunMetal);
+    border-radius: 2px;
+}
+
+.exit-1 {
+    transform: rotateZ(-45deg);
+}
+
+.exit-2 {
+    transform: rotateZ(45deg);
+}
+
+.min {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.min-line {
+    width: 1.5rem;
+    height: 0.25rem;
+    border-radius: 2px;
+    background-color: var(--gunMetal);
+}
+
+.window-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 2rem;
+    align-items: center;
+}
+
+.max {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 0.25rem solid var(--gunMetal);
+    border-radius: 2px;
+
+}
+
+#profile-picture {
+    object-fit: cover;
+    width: 15rem;
+    height: 25rem; 
+    border: 2px solid var(--darkSlate);
+    transition: all ease-in-out 500ms;
+    cursor: pointer;
+}
+
+#about-me-content {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
+
+#about-me-content div {
+    min-width: 75%;
+    margin-right: 1rem;
+}
+
+#about-me-content img {
+    min-width: 25%;
+}
+
+#about-me-content h1 {
+    color: var(--darkSlate);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#about-me-content h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#jumbo-desc {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#jumbo-desc a {
+    text-decoration: none;
+    color: var(--darkSpring);
+}
+
+.highlight-txt {
+    color: var(--darkSpring);
+    font-weight: 600;
+}
+
+#jumbo-back-canvas {
+    background-color: #B8D9CB;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
