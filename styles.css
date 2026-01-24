@@ -16,7 +16,6 @@ html {
     overflow-x: hidden;
 }
 
-
 body {
     width: 100vw;
     height: 100vh;
@@ -34,8 +33,9 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    padding: 2rem;
     margin-bottom: 1rem;
+    border-bottom: var(--darkSlate) solid 0.1rem;
+    background-color: #eee;
 
 }
 
@@ -50,14 +50,25 @@ nav div ul {
     list-style: none;
 }
 
+nav div ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 nav div ul li a {
     text-decoration: none;
     color: var(--gunMetal);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
+    padding: 2rem;
+
 }
 
-
+.current-page {
+    background-color: var(--darkSlate);
+    color: #EEE;
+}
 
 .window {
     margin-bottom: 5rem;
@@ -90,6 +101,15 @@ nav div ul li a {
     width: 15%;
     justify-content: space-between;
     align-items: center;
+}
+
+#mycanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -100;
 }
 
 .exit-win {
@@ -137,6 +157,7 @@ nav div ul li a {
     justify-content: start;
     padding: 2rem;
     align-items: center;
+    position: relative;
 }
 
 .max {
