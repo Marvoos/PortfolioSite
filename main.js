@@ -1,10 +1,8 @@
 let jumboIndex = 0;
 const jumboDescTxt = document.getElementById("jumbo-desc");
 
-changeTextIndex()
-setInterval(changeTextIndex, 10000);
 
-// Jumbotron code using constants and an array, will change this to a button instead of a set interval later.
+
 const currYear = "Fourth year";
 const currUniversity = ["https://www.uwindsor.ca/", "The University of Windsor"];
 const currProgram = ["http://future.uwindsor.ca/program/computer-science/", "Computer Science"]
@@ -17,7 +15,6 @@ const jumboBodyText = [
     `<p>On this page, I have given you, the <span class="highlight-txt important-txt">reader</span>, a chance to glance at all of my projects, my resume, and previous jobs.</p>`,
 ];
 
-
 function changeTextIndex() {
     jumboDescTxt.innerHTML = "";
     if (jumboIndex >= 2) {
@@ -29,8 +26,9 @@ function changeTextIndex() {
 
 }
 
+changeTextIndex()
+setInterval(changeTextIndex, 10000);
 
-// Code for implementing job experience. Implement later
 const getDateInPosition = (startDateInMs, endDateInMs) => {
     const timeDiffInMs = endDateInMs - startDateInMs;
     const timeDiffInYears = timeDiffInMs / 3.154e+10;
