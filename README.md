@@ -22,8 +22,9 @@ While I am still learning a ton about the backend and features of JavaScript, I 
 
 | Date | Description |
 | ---- | ----------- |
-| 01/27/2026 | Added new formatting to the markdown document for documentation purposes |
+| 01/27/2026 | Added new formatting to the markdown document for documentation purposes. Also added a dynamic button system to display information in the jumbotron. |
 
 ## Comments
 
 __01/27/2026__: Liking the styling so far, however, whitespace seems to be hard on the eyes.
+
