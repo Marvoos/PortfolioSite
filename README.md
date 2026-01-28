@@ -24,31 +24,6 @@ While I am still learning a ton about the backend and features of JavaScript, I 
 | ---- | ----------- |
 | 01/27/2026 | Added new formatting to the markdown document for documentation purposes |
 
-## Todo
-
-- [ ] Come up with a general style to use across the website.
-  - [ ] Ensure the contrast ratio is high enough between theme colours to differentiate neighbouring elements.
-  - [ ] Headings
-  - [ ] Buttons
-  - [ ] Links
-  - [ ] Nav
-  - [ ] Hover
-  - [ ] Job cards
-  - [ ] Experience Cards
-  - [ ] Education Cards
-    - [ ] Courses Taken
-    - [ ] Schools went to
-    - [ ] Degrees
-    - [ ] Future plans
-  - [ ] Jumbotron
-- [ ] Decide on what to do with the canvas element
-- [ ] Incorporate iframe elements
-- [ ] Begin working on the contact and project pages
-- [ ] Finish the about page
-- [ ] Finish the project page
-- [ ] Finish the contact page
-- [ ] Add darkmode to each page
-
 ## Comments
 
 __01/27/2026__: Liking the styling so far, however, whitespace seems to be hard on the eyes.

@@ -1,6 +1,10 @@
-let jumboIndex = 0;
 const ctx = document.getElementById("mycanvas");
+
+// Beginning of Jumbotron button programming
+
 const jumboDescTxt = document.getElementById("jumbo-desc");
+const jumboRoundBtnDiv = document.querySelector(".round-btn-div");
+let roundBtnSelected = 0;
 const currYear = "Fourth year";
 const currUniversity = ["https://www.uwindsor.ca/", "The University of Windsor"];
 const currProgram = ["http://future.uwindsor.ca/program/computer-science/", "Computer Science"]
@@ -8,24 +12,42 @@ const ageOfMe = parseInt(((new Date()) - (new Date("2004-11-24"))) / 3.154e+10);
 const jumboBodyText = [
     `<p>Hi! My name is Kayden, I'm going through my <span class="highlight-txt">${currYear}</span> at <span class="highlight-txt"><a href="${currUniversity[0]}" target="_blank">${currUniversity[1]}</a></span> for <span class="highlight-txt"><a href="${currProgram[0]}" target="_blank">${currProgram[1]}</a></span>.</p>`,
     `<p>At <span class="highlight-txt">${ageOfMe} years old</span> I am an aspiring <span class="highlight-txt">programmer</span> and <span class="highlight-txt">creative</span> dedicated to bringing an <span class="highlight-txt">imaginative mind</span> to the field.</p>`,
-    `<p>On this page, I have given you, the <span class="highlight-txt important-txt">reader</span>, a chance to glance at all of my projects, my resume, and previous jobs.</p>`,
+    `<p>On this page, I have given you, the <span class="highlight-txt important-txt">reader</span>, a chance to glance at all of my projects, my resume, and developmental experiences.</p>`
 ];
 
-
-
-function changeTextIndex() {
+function changeTextIndex(newIndex) {
     jumboDescTxt.innerHTML = "";
-    if (jumboIndex >= 2) {
-        jumboIndex = 0;
-    }
-
-    jumboDescTxt.innerHTML = jumboBodyText[jumboIndex];
-    jumboIndex++;
-
+    jumboDescTxt.innerHTML = jumboBodyText[newIndex];
+    roundBtnSelected = newIndex;
 }
 
-changeTextIndex()
-setInterval(changeTextIndex, 10000);
+changeTextIndex(roundBtnSelected);
+
+jumboBodyText.forEach(() => {
+    const jumboRoundBtn = document.createElement('button');
+    jumboRoundBtn.classList.add('round-btn');
+    jumboRoundBtnDiv.appendChild(jumboRoundBtn);
+    
+});
+
+const jumboRoundBtns = document.querySelectorAll('.round-btn');
+
+jumboRoundBtns.forEach((val, i) => {
+    jumboRoundBtns[roundBtnSelected].classList.add('selected');
+    jumboRoundBtns[i].addEventListener('click', () => {
+        
+        jumboRoundBtns[roundBtnSelected].classList.remove('selected');
+
+        roundBtnSelected = i;
+        changeTextIndex(i);
+        jumboRoundBtns[i].classList.add('selected');
+    });
+});
+
+// End of jumbotron button programming
+
+
+// Beginning of jobs section
 
 const getDateInPosition = (startDateInMs, endDateInMs) => {
     const timeDiffInMs = endDateInMs - startDateInMs;
@@ -44,12 +66,11 @@ const getDateInPosition = (startDateInMs, endDateInMs) => {
 }
 
 const getMonthYearDate = (startDateInMs) => {
-    const monthKey = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const monthKey = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
     const startMonth = startDateInMs.getMonth();
     const startYear = startDateInMs.getFullYear();
     return `${monthKey[startMonth]} ${startYear}`;
 }
-
 
 const jobs = [
     {
@@ -89,6 +110,5 @@ const jobs = [
     }
 ]
 
-
-
+// End of jobs section
 
