@@ -2,7 +2,11 @@
 
 __Author:__ _Kayden Ions_
 
+***
+
 __Website Link:__ [marvoos.github.io/PortfolioSite/](https://marvoos.github.io/PortfolioSite/)
+
+***
 
 ## Description
 
@@ -22,9 +26,23 @@ While I am still learning a ton about the backend and features of JavaScript, I 
 
 | Date | Description |
 | ---- | ----------- |
-| 01/27/2026 | Added new formatting to the markdown document for documentation purposes. Also added a dynamic button system to display information in the jumbotron. |
+| 01/27/2026 | Added new formatting to the markdown document for documentation purposes |
+
+## Todo
+
+- [ ] Learn HTMl canvas.
+- [ ] Implement dynamic graphics.
+- [ ] Construct a consistent theme among webpages.
+  - [ ] Buttons, links, custom graphics, navs
+  - [ ] High contrast ratios between neighbouring elements
+- [ ] Design wireframes of more complex sections of each page.
+- [ ] Implement a projects section using the JSON data and iframes within an experience page.
+- [ ] Implement a courses section as part of an experience page.
+- [ ] Design a contact page without a scripting language.
 
 ## Comments
 
-__01/27/2026__: Liking the styling so far, however, whitespace seems to be hard on the eyes.
-
+| Date | Category | Description |
+| ---- | ----------- | ----------- |
+| 01/27/2026 | Website theme | Liking the styling so far, however, whitespace seems to be hard on the eyes. |
+| 01/28/2026 | Website controls | After finishing the buttons, it seems that I could reuse this component for future projects. |
