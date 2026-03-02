@@ -4,6 +4,9 @@
     --gunMetal: #152324;
     --ashGray: #B8D9CB;
     --cambridgeBlue: #70947D;
+
+    --grid-template-size: 12;
+    --standard-border-size: 0.2rem;
 }
 
 * {
@@ -20,11 +23,8 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #EEE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     min-height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 nav {
@@ -34,7 +34,7 @@ nav {
     align-items: center;
     justify-content: start;
     margin-bottom: 1rem;
-    border-bottom: var(--darkSlate) solid 0.1rem;
+    border-bottom: var(--darkSlate) solid var(--standard-border-size);
     background-color: #eee;
 
 }
@@ -68,6 +68,16 @@ nav div ul li a {
 .current-page {
     background-color: var(--darkSlate);
     color: #EEE;
+}
+
+.jumbo-sec {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 .window {
@@ -152,12 +162,9 @@ nav div ul li a {
 }
 
 .window-pane {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 2rem;
-    align-items: center;
+    display: grid;
     position: relative;
+    padding: 2rem;
 }
 
 .max {
@@ -172,7 +179,7 @@ nav div ul li a {
     object-fit: cover;
     width: 15rem;
     height: 25rem; 
-    border: 2px solid var(--darkSlate);
+    border: var(--standard-border-size) solid var(--darkSlate);
     transition: all ease-in-out 500ms;
     cursor: pointer;
 }
@@ -196,14 +203,6 @@ nav div ul li a {
     color: var(--darkSlate);
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-}
-
-#about-me-content h3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#jumbo-desc {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #jumbo-desc a {
@@ -242,14 +241,14 @@ nav div ul li a {
     border-radius: 50%;
     cursor: pointer;
     margin: 1rem 0.75rem 0 0.75rem;
-    border: var(--darkSlate) solid 0.2rem;
+    border: var(--darkSlate) solid var(--standard-border-size);
     opacity: 80%;
     transition: all 0.2s ease-in-out;
 }
 
 .round-btn:hover {
     background-color: var(--darkSlate);
-    border: var(--gunMetal) solid 0.2rem;
+    border: var(--gunMetal) solid var(--standard-border-size);
 }
 
 .round-btn.selected {
@@ -258,3 +257,54 @@ nav div ul li a {
     background-color: var(--cambridgeBlue);
     border: var(--darkSlate) solid 0.2rem;
 }
+
+#courses {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-template-size), minmax(0, 1fr));
+    grid-auto-rows: minmax(2rem, auto);
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.third-col {
+    grid-column: span calc(var(--grid-template-size) / 3);
+}
+
+
+.fourth-col {
+    grid-column: span calc(var(--grid-template-size) / 4);
+}
+
+
+.sixth-col {
+    grid-column: span calc(var(--grid-template-size) / 6);
+}
+
+.row-one {
+    grid-row: span 1;
+}
+
+.row-two {
+    grid-row: span 2;
+}
+
+.row-three {
+    grid-row: span 3;
+}
+
+.full-col {
+    grid-column: span var(--grid-template-size);
+}
+
+.course-card {
+    background-color: var(--ashGray);
+    padding: 1rem;
+    border: solid var(--darkSlate) var(--standard-border-size);
+    cursor: pointer;
+}
+
+.course-card > h3 {
+    font-weight: lighter;
+}
+
+
